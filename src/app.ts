@@ -74,9 +74,9 @@ export default class App {
         this.camera.useAutoRotationBehavior = true;
         this.camera.lowerRadiusLimit = 5;
         this.camera.upperRadiusLimit = 30;
-        //camera.pinchDeltaPercentage = 0.025;
-        //camera.pinchToPanMaxDistance = 24;
-        //camera.panningSensibility = 1000;
+        this.camera.pinchDeltaPercentage = 0.025;
+        this.camera.pinchToPanMaxDistance = 24;
+        this.camera.panningSensibility = 1000;
         this.camera.attachControl(this.canvas, true);
 
        SceneLoader.ImportMesh(

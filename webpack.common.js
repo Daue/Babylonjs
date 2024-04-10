@@ -59,10 +59,13 @@ module.exports = {
     },
     plugins: [
         // new BundleAnalyzerPlugin(),
-        new CleanWebpackPlugin(),
+        new CleanWebpackPlugin( {
+            cleanOnceBeforeBuildPatterns: ["**/*", "!assets/**", "!.git/**"],
+        }),
         new HtmlWebpackPlugin({
             inject: true,
             template: path.resolve(appDirectory, "public/index.html"),
+            minify: false
         }),
     ],
 };
